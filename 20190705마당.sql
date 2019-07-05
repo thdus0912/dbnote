@@ -1,3 +1,4 @@
+----------질의 연습----------
 select bookname, price
 from book;
 
@@ -179,9 +180,9 @@ ex)
 from 절에 위치
 ex)
     select cs.name, sum(od.saleprice) "total"
-    from    (select custid, name
+    from    <<(select custid, name
              from customer
-             where custid <= 2) cs,
+             where custid <= 2)>> cs,
              orders od
     where cs.custid = od. custid
     group by cs.name;
